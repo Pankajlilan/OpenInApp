@@ -1,10 +1,9 @@
 package com.pankaj.inopenapp.presentation.dashboard
 
-import com.pankaj.inopenapp.data.model.DashboardDTO
-import com.pankaj.inopenapp.domain.model.EmployeePostsItem
+import com.pankaj.inopenapp.domain.model.Dashboard
 
 data class DashboardState(
-    val isLoading: Boolean = false,
-    val data: DashboardDTO? = null,
-    val error: String = ""
+  val isLoading: Boolean = false,
+  val data: Dashboard? = null,
+  val error: String = ""
 )

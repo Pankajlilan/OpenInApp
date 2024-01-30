@@ -1,8 +1,19 @@
 package com.pankaj.inopenapp.data.model
 
+import com.pankaj.inopenapp.domain.model.Data
+
 data class DataDTO(
-    val favourite_links: List<Any>,
-    val overall_url_chart: OverallUrlChart,
-    val recent_linkDTOS: List<LinkDTO>,
-    val top_linkDTOS: List<LinkDTO>
+  val favourite_links: MutableList<LinkDTO>?,
+  val overall_url_chart: OverallUrlChartDTO,
+  val recent_links: MutableList<LinkDTO>?,
+  val top_links: MutableList<LinkDTO>?
 )
+
+fun DataDTO.toData(): Data {
+  return Data(
+    favouriteLinks = this.favourite_links?.map { it.toLink() }?.toMutableList() ?: mutableListOf(),
+    overallUrlChart = this.overall_url_chart.toOverallUrlChart(),
+    recentLinks = this.recent_links?.map { it.toLink() }?.toMutableList() ?: mutableListOf(),
+    topLinks = this.top_links?.map { it.toLink() }?.toMutableList() ?: mutableListOf()
+  )
+}
