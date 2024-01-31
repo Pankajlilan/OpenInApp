@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -151,6 +152,16 @@ class DashboardFragment : Fragment() {
           }
         }
       }
+    }
+    
+    requireView().isFocusableInTouchMode = true
+    requireView().requestFocus()
+    requireView().setOnKeyListener { _, keyCode, _ ->
+      if (keyCode == KeyEvent.KEYCODE_BACK) {
+        requireActivity().finish()
+        return@setOnKeyListener true
+      }
+      return@setOnKeyListener false
     }
   }
   
