@@ -35,3 +35,4 @@ https://github.com/Pankajlilan/OpenInApp/assets/10745274/e3ee554e-3c59-435b-9cf0
 * [Navigation](https://developer.android.com/guide/navigation)
 * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
 * [OkHttp](https://github.com/square/okhttp)
+* [Lottie](https://github.com/airbnb/lottie-android)
