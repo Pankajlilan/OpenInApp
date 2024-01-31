@@ -28,8 +28,6 @@ import java.io.InputStreamReader
 class OnboardingFragment : Fragment() {
   
   private val TAG: String = javaClass.name.toString()
-  private val viewModel: OnboardingViewModel by viewModels()
-  private lateinit var bearerToken: String
   
   private var _binding: FragmentOnboardingBinding? = null
   private val binding: FragmentOnboardingBinding

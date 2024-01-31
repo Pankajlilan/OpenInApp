@@ -12,22 +12,6 @@ class EncryptedPreferenceManager @Inject constructor(private val context: Contex
   private val sharedPreferencesName = "encrypted_shared_preferences"
   private val masterKeyAlias = "master_key_alias"
   
-  private val masterKey: MasterKey by lazy {
-    createMasterKey()
-  }
-  
-  private fun createMasterKey(): MasterKey {
-    return try {
-      MasterKey.Builder(context)
-        .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
-        .build()
-    } catch (e: IOException) {
-      throw RuntimeException("Failed to create master key", e)
-    } catch (e: GeneralSecurityException) {
-      throw RuntimeException("Failed to create master key", e)
-    }
-  }
-  
   private val encryptedSharedPreferences by lazy {
     EncryptedSharedPreferences.create(
       sharedPreferencesName,

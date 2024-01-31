@@ -4,9 +4,7 @@ package com.pankaj.inopenapp.network
 import com.pankaj.inopenapp.common.Constants
 import com.pankaj.inopenapp.data.remote.DashboardAPI
 import com.pankaj.inopenapp.data.repository.DashboardRepositoryImpl
-import com.pankaj.inopenapp.data.repository.EmployeeSearchRepositoryImpl
 import com.pankaj.inopenapp.domain.repository.DashboardRepository
-import com.pankaj.inopenapp.domain.repository.EmployeeSearchRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -53,13 +51,9 @@ object HiltModules {
       .create(DashboardAPI::class.java)
   }
   
-  @Provides
-  fun provideEmployeeSearchRepository(dashboardAPI: DashboardAPI): EmployeeSearchRepository {
-    return EmployeeSearchRepositoryImpl()
-  }
   
   @Provides
-  fun provideEmployeePosts(dashboardAPI: DashboardAPI): DashboardRepository {
+  fun provideDashboardData(dashboardAPI: DashboardAPI): DashboardRepository {
     return DashboardRepositoryImpl(dashboardAPI)
   }
 }

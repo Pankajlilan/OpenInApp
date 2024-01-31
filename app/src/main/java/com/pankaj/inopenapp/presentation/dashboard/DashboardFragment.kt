@@ -120,6 +120,7 @@ class DashboardFragment : Fragment() {
               RecentLinksAdapter(dashboard.data.recentLinks, requireContext())
             recentLinksRecyclerView.adapter = recentLinksAdapter
             
+//          Switching between Top Links and Recent Links
             switchLinks()
             setLineChartData(dashboard.data.overallUrlChart)
             
