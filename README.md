@@ -2,9 +2,12 @@
 This project is a Kotlin-based Android application that utilizes the MVVM architecture pattern for development. It integrates with the specified API (InOpenApp API) to fetch data and display it in the application.
 
 ### 🌟 Features
-*   Complete code is written in Kotlin
-*   MVVM Clean Architecture
-*   Used Jetpack Components
+- **Architecture Pattern**: Utilizes the MVVM (Model-View-ViewModel) clean architecture pattern for a structured development approach.
+- **API Integration**: Communicates with the specified API using the provided bearer token.
+- **Token Management**: Reads the bearer token from encrypted SharedPreferences during runtime for secure and authenticated API calls. Utilizes 256-bit encryption for enhanced security.
+- **Navigation**: Implements Jetpack Navigation for seamless navigation between fragments within the application.
+- **Networking Layer**: Incorporates a robust networking layer to handle both GET and POST API calls efficiently.
+
 
 ### 🎥 Demo
 https://github.com/Pankajlilan/OpenInApp/assets/10745274/e3ee554e-3c59-435b-9cf0-ef4de25393a2
