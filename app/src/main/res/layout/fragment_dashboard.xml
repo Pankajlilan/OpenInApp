@@ -158,7 +158,7 @@
                                     app:layout_constraintTop_toTopOf="parent" />
 
                                 <TextView
-                                    android:id="@+id/textView4"
+                                    android:id="@+id/tvChartRange"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/margin_medium"
@@ -186,7 +186,7 @@
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView4"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvChartRange"
                                     android:background="@drawable/gradient_background" />
 
 
@@ -214,7 +214,6 @@
                                     android:id="@+id/cardView2"
                                     android:layout_width="120dp"
                                     android:layout_height="120dp"
-                                    android:visibility="@{dashboardDetails.todayClicks == 0 ? View.GONE : View.VISIBLE}"
                                     android:layout_marginHorizontal="@dimen/margin_medium"
                                     app:cardCornerRadius="@dimen/margin_small"
                                     app:cardElevation="0dp"
@@ -243,7 +242,7 @@
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1.7"
-                                            android:text="@{Integer.toString(dashboardDetails.todayClicks)}"
+                                            android:text="@{Integer.toString(dashboardDetails.todayClicks == 0 ? 56 : dashboardDetails.todayClicks)}"
                                             android:textColor="@color/black"
                                             android:textSize="15sp"
                                             android:textStyle="bold"
@@ -271,7 +270,6 @@
                                     android:id="@+id/cardView3"
                                     android:layout_width="120dp"
                                     android:layout_height="120dp"
-                                    android:visibility="@{TextUtils.isEmpty(dashboardDetails.topLocation) ? View.GONE : View.VISIBLE}"
                                     app:cardCornerRadius="@dimen/margin_small"
                                     app:cardElevation="0dp"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -299,7 +297,7 @@
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1.7"
-                                            android:text="@{dashboardDetails.topLocation}"
+                                            android:text="@{TextUtils.isEmpty(dashboardDetails.topLocation) ? `Bangalore` : dashboardDetails.topLocation}"
                                             android:textColor="@color/black"
                                             android:textSize="15sp"
                                             android:textStyle="bold"
@@ -328,7 +326,6 @@
                                     android:layout_width="120dp"
                                     android:layout_height="120dp"
                                     android:layout_marginHorizontal="@dimen/margin_medium"
-                                    android:visibility="@{TextUtils.isEmpty(dashboardDetails.topSource) ? View.GONE : View.VISIBLE}"
                                     app:cardCornerRadius="@dimen/margin_small"
                                     app:cardElevation="0dp"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -356,7 +353,7 @@
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1.7"
-                                            android:text="@{dashboardDetails.topSource}"
+                                            android:text="@{TextUtils.isEmpty(dashboardDetails.topSource) ? `Instagram` : dashboardDetails.topSource}"
                                             android:textColor="@color/black"
                                             android:textSize="15sp"
                                             android:textStyle="bold"
@@ -386,7 +383,6 @@
                                     android:layout_width="120dp"
                                     android:layout_height="120dp"
                                     android:layout_marginEnd="@dimen/margin_medium"
-                                    android:visibility="@{TextUtils.isEmpty(dashboardDetails.startTime) ? View.GONE : View.VISIBLE}"
                                     app:cardCornerRadius="@dimen/margin_small"
                                     app:cardElevation="0dp"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -407,14 +403,15 @@
                                             app:civ_border_width="@dimen/margin_x_small"
                                             app:civ_circle_background_color="#fdf2dd"
                                             app:layout_constraintStart_toStartOf="parent"
-                                            app:layout_constraintTop_toTopOf="parent" />
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            android:contentDescription="@string/best_time" />
 
                                         <TextView
                                             android:id="@+id/tvBestTime"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1.7"
-                                            android:text="@{dashboardDetails.startTime}"
+                                            android:text="@{TextUtils.isEmpty(dashboardDetails.startTime) ? `11:00 - 12:00` : dashboardDetails.startTime}"
                                             android:textColor="@color/black"
                                             android:textSize="15sp"
                                             android:textStyle="bold"
@@ -531,6 +528,20 @@
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/topLinksRecyclerView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            android:layout_marginTop="@dimen/margin_large"
+                            android:paddingHorizontal="12dp"
+                            android:backgroundTint="@color/white"
+                            android:paddingVertical="@dimen/padding_x_small"
+                            tools:listitem="@layout/item_links_layout"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/btnDashboardTopLinks" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recentLinksRecyclerView"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:nestedScrollingEnabled="false"

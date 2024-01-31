@@ -17,16 +17,63 @@
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
             app:popExitAnim="@anim/fade_out"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/coursesFragment"
+        android:name="com.pankaj.inopenapp.presentation.courses.CoursesFragment"
+        android:label="CoursesFragment"
+        tools:layout="@layout/fragment_courses">
+
+    </fragment>
+    <fragment
+        android:id="@+id/campaignsFragment"
+        android:name="com.pankaj.inopenapp.presentation.campaigns.CampaignsFragment"
+        android:label="CampaignsFragment"
+        tools:layout="@layout/fragment_courses">
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.pankaj.inopenapp.presentation.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.pankaj.inopenapp.presentation.dashboard.DashboardFragment"
-        android:label="EmployeeDetailsFragment">
+        android:label="DashboardFragment">
         <argument
             android:name="bearer_token"
             android:defaultValue="@null"
             app:argType="string"
             app:nullable="true" />
+
+        <action
+            android:id="@+id/navigate_to_coursesFragment"
+            app:destination="@id/coursesFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+
+        <action
+            android:id="@+id/navigate_to_campaignsFragment"
+            app:destination="@id/campaignsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+
+        <action
+            android:id="@+id/navigate_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+
 
     </fragment>
 </navigation>

@@ -5,7 +5,6 @@
     <string name="enter_user_id">Enter User Id</string>
     <string name="number_one">1</string>
     <string name="proceed">Proceed</string>
-    <string name="enter_user_id_here">Enter User Id here...</string>
     <string name="user_id_not_found">User Id Not Found</string>
     <string name="user_idnot_empty">User Id cannot be empty</string>
     <string name="nothing_found">Nothing Found</string>
@@ -35,4 +34,8 @@
     <string name="good_afternoon">Good afternoon!</string>
     <string name="good_evening">Good evening!</string>
     <string name="good_night">Good night!</string>
+    <string name="courses_fragment">Courses Feature \ncoming soon..</string>
+    <string name="campaigns_fragment">Campaigns Feature \ncoming soon..</string>
+    <string name="profile_fragment">Profile Feature \ncoming soon..</string>
+    <string name="chart_date_range">%1\$s - %2\$s</string>
 </resources>

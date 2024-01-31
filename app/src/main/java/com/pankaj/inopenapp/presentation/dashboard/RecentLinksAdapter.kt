@@ -18,7 +18,8 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class DashboardAdapter(private val list: MutableList<Link>,private val requireContext: Context) : RecyclerView.Adapter<DashboardAdapter.MyViewHolder>() {
+class RecentLinksAdapter(private val list: MutableList<Link>, private val requireContext: Context) :
+  RecyclerView.Adapter<RecentLinksAdapter.MyViewHolder>() {
   
   private var listener: ((Link) -> Unit)? = null
   
