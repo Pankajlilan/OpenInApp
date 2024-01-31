@@ -238,14 +238,14 @@ class DashboardFragment : Fragment() {
     lineDataSet.apply {
       disableDashedLine()
       //We add features to our chart
-      color = resources.getColor(R.color.colorPrimary)
+      color = ContextCompat.getColor(requireContext(),R.color.colorPrimary)
       
       setGradientColor(
-        resources.getColor(R.color.colorPrimary),
-        resources.getColor(R.color.white)
+        ContextCompat.getColor(requireContext(),R.color.colorPrimary),
+        ContextCompat.getColor(requireContext(),R.color.white)
       )
-      fillColor = resources.getColor(R.color.colorPrimary)
-      color = resources.getColor(R.color.colorPrimary)
+      fillColor = ContextCompat.getColor(requireContext(),R.color.colorPrimary)
+      color = ContextCompat.getColor(requireContext(),R.color.colorPrimary)
       setDrawFilled(true)
       fillDrawable = ContextCompat.getDrawable(requireContext(), R.drawable.gradient_fill)
       setDrawValues(false) // Disable value text
@@ -280,7 +280,7 @@ class DashboardFragment : Fragment() {
 // Set text color for bottom x-axis labels
     binding.getTheGraph.xAxis.textColor = Color.LTGRAY
     
-    binding.getTheGraph.setBackgroundColor(resources.getColor(R.color.white))
+    binding.getTheGraph.setBackgroundColor(ContextCompat.getColor(requireContext(),R.color.white))
     binding.getTheGraph.animateXY(2000, 2000, Easing.EaseInCubic)
     
   }
