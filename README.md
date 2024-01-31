@@ -7,7 +7,15 @@ This project is a Kotlin-based Android application that utilizes the MVVM archit
 *   Used Jetpack Components
 
 ### 🎥 Demo
-https://user-images.githubusercontent.com/10745274/219845829-f6b3987d-126c-4b10-8dc1-9d9f47329315.mp4
+https://github.com/Pankajlilan/OpenInApp/assets/10745274/e3ee554e-3c59-435b-9cf0-ef4de25393a2
+
+### 🎥 Screen Shots
+![Screenshot_2024-01-31-14-07-31-91_326bb15694499c123ad5e3d1f275c42a](https://github.com/Pankajlilan/OpenInApp/assets/10745274/9935d006-9a4c-4014-85c7-77448a7e9373)
+![Screenshot_2024-01-31-14-07-27-60_326bb15694499c123ad5e3d1f275c42a](https://github.com/Pankajlilan/OpenInApp/assets/10745274/e562b6aa-816a-4dbe-9b9a-f58c99441fa8)
+![Screenshot_2024-01-31-14-07-22-82_326bb15694499c123ad5e3d1f275c42a](https://github.com/Pankajlilan/OpenInApp/assets/10745274/ed7ee2ab-74a1-42b9-926d-4388206a91b7)
+![Screenshot_2024-01-31-14-07-12-57_326bb15694499c123ad5e3d1f275c42a](https://github.com/Pankajlilan/OpenInApp/assets/10745274/f8aada6c-4972-45df-ad8c-839720ec95c6)
+![Screenshot_2024-01-31-13-43-20-97_4336b74596784d9a2aa81f87c2016f50](https://github.com/Pankajlilan/OpenInApp/assets/10745274/d9c23955-96b5-414c-b77b-a5c6607e7384)
+
 
 ### 💻  Installing
 1.  In Android Studio, go to File -> New -> Import project
